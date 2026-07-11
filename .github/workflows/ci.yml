@@ -23,7 +23,7 @@ jobs:
         cache: 'npm'
     - name: Install dependencies
       run: npm ci
-#cd 
+#cd pipeline
     - name: Deply to Render
       if: github.ref == 'refs/heads/main'
       run: curl -X POST ${{secrets.RENDER_DEPLY_HOOK}}
