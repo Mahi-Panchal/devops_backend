@@ -25,5 +25,5 @@ jobs:
       run: npm ci
 #cd 
     - name: Deply to Render
-      if github.ref == 'refs/heads/main'
+      if: github.ref == 'refs/heads/main'
       run: curl -X POST ${{secrets.RENDER_DEPLY_HOOK}}
